@@ -7,17 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Architect Reality</title>
     <link rel="stylesheet" href="./css/style.css">
-    <!-- <link rel="stylesheet" href="./css/onepage-scroll.css"> -->
-
-    <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="./css/fullpage.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script type="text/javascript" src="./script/slider.js"></script>
+    <script type="text/javascript" src="./libs/fullpage.js"></script>
     <script type="text/javascript" src="./libs/rellax.min.js"></script>
     <script type="text/javascript" src="./libs/rellax.js"></script>
-    <script type="text/javascript" src="./libs/wheel-indicator.js"></script>
-    <script type="text/javascript" src="./libs/wheel.js"></script>
-    <!-- <script type="text/javascript" src="./libs/animation.js"></script> -->
-    <!-- <script type="text/javascript" src="./libs/jquery.onepage-scroll.min.js"></script> -->
+    <script type="text/javascript" src="./script/animation.js"></script>
 
 
 </head>
@@ -38,24 +33,24 @@
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li class="header__item">
-                            <a href="#1" class="header__link">
+                            <a href="#!" class="header__link">
                                 Company
-                        </a>
+                            </a>
                         </li>
                         <li class="header__item">
                             <a href="#!" class="header__link">
                                 Projects
-                        </a>
+                            </a>
                         </li>
                         <li class="header__item">
                             <a href="#!" class="header__link">
                                 Service
-                        </a>
+                            </a>
                         </li>
                         <li class="header__item">
                             <a href="#!" class="header__link">
                                 Contacts
-                        </a>
+                            </a>
                         </li>
 
 
@@ -75,10 +70,10 @@
         </div>
     </header>
 
-    <main class="main">
+    <main class="main" id="fullpage">
 
 
-        <section class="intro">
+        <section class="intro section" id="intro">
 
 
             <div class="bg rellax" data-rellax-speed="0"></div>
@@ -86,15 +81,8 @@
             <div class="linear-bg2 rellax" data-rellax-speed="1"></div>
             <div class="linear-bg rellax" data-rellax-speed="4.5"></div>
             <div class="linear-bg4 rellax" data-rellax-speed="4.5"></div>
-            <div class="intro__dot-item_1"></div>
-            <div class="intro__dot-item_2"></div>
-            <div class="intro__dot-item_3"></div>
-            <div class="intro__dot-item_4"></div>
-            <div class="intro__dot-item_5"></div>
 
-
-            <div class="wrapper">
-
+            <div class="intro wrapper">
                 <p class="intro__title-tag">Architect buro</p>
                 <h1 class="intro__title">Architect Reality</h1>
                 <p class="intro__title-subtitle">
@@ -103,15 +91,15 @@
                 <div class="intro__title-more_arrow"></div>
                 <div class="intro__title-more_arrow_2"></div>
                 <div class="intro__title-more">
-                    <a href="#1">More information</a>
+                    <p>More information</p>
                 </div>
-
+            </div>
             </div>
 
         </section>
 
 
-        <section class="about">
+        <section class="about section" id="about">
             <div class="about__title-wrap">
                 <div class="about__title-tag">History of company</div>
                 <div class="about__title">About us</div>
@@ -131,37 +119,23 @@
 
     </main>
 
-    <!-- <section class="about ">
-        <div class="about__title-wrap">
-            <div class="about__title-tag">History of company</div>
-            <div class="about__title">About us</div>
-            <div id="1" class="about__title-content ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos esse ea, voluptatibus praesentium temporibus voluptatem asperiores natus, omnis cupiditate odit perspiciatis, sit laudantium? Ratione praesentium et, doloremque eum rem sint!
-            </div>
-            <div class="about__title-more_arrow">
-                <a href="#!" content=""></a>
-            </div>
-            <div class="about__title-more_arrow_2">
-                <a href="#!" content=""></a>
-            </div>
-            <div class="about__title-subtitle"><a href="#!">Project</a> </div>
-            <div class="about__title-img"></div>
-        </div>
-    </section> -->
+
     <!-- <footer>
 
         Copyright
 
     </footer> -->
+
     <script>
-        var rellax = new Rellax('.rellax', {
-            speed: -2,
-            center: false,
-            wrapper: null,
-            round: true,
-            vertical: true,
-            horizontal: false
+        new fullpage('#fullpage', {
+            anchors: ['slide1', 'slide2'],
+            scrollingSpeed: 1800,
+            navigation: true,
+            fadingEffect: true,
+            fadingEffect: 'sections'
         });
     </script>
+
 </body>
 
 </html>
